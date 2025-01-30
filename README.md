@@ -1,8 +1,49 @@
-# React + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview:- 
 
-Currently, two official plugins are available:
+This is a simple weather application built using React.js and OpenWeatherMap API. It allows users to search for a city and view the current weather conditions, including temperature, humidity, and wind speed.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features:-
+
+- 🔍 Search for a city to get real-time weather data.
+
+- 🌦 Displays temperature, humidity, and wind speed.
+
+- 🎨 Beautiful UI with Tailwind CSS.
+
+- 🌍 Default weather for London on initial load.
+
+- 🔄 Error handling for incorrect city names or API failures.
+
+- 🚀 Responsive design that works on all devices.
+
+## Tech Stack:-
+
+- React.js (useState, useEffect, useRef)
+
+- Tailwind CSS for styling
+
+- OpenWeatherMap API for weather data
+
+## Functionality Breakdown:- 
+
+### 1. Weather.js
+
+- useRef is used to reference the input field.
+
+- useState manages weatherData, loading, and error states.
+
+- useEffect fetches weather data for London on initial render.
+
+### 2. fetchWeather(city):
+
+- Fetches weather data from OpenWeatherMap API.
+
+- Updates state variables (weatherData, loading, error).
+
+- Handles API errors and invalid city names.
+
+### 3. WeatherDetail Component:
+
+- Displays additional weather details (humidity and wind speed).
